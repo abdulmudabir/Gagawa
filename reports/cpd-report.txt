@@ -1,0 +1,2330 @@
+Found a 47 line (420 tokens) duplication in the following files: 
+Starting at line 37 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\EscapeText.java
+Starting at line 96 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\EscapeText.java
+
+			case '\'':sb.append("&#39;"); break;
+			case '<':sb.append("&lt;"); break;
+			case '>':sb.append("&gt;"); break;
+			case 'à': sb.append("&agrave;");break;
+			case 'À': sb.append("&Agrave;");break;
+			case 'â': sb.append("&acirc;");break;
+			case 'Â': sb.append("&Acirc;");break;
+			case 'ä': sb.append("&auml;");break;
+			case 'Ä': sb.append("&Auml;");break;
+			case 'å': sb.append("&aring;");break;
+			case 'Å': sb.append("&Aring;");break;
+			case 'æ': sb.append("&aelig;");break;
+			case 'Æ': sb.append("&AElig;");break;
+			case 'ç': sb.append("&ccedil;");break;
+			case 'Ç': sb.append("&Ccedil;");break;
+			case 'é': sb.append("&eacute;");break;
+			case 'É': sb.append("&Eacute;");break;
+			case 'è': sb.append("&egrave;");break;
+			case 'È': sb.append("&Egrave;");break;
+			case 'ê': sb.append("&ecirc;");break;
+			case 'Ê': sb.append("&Ecirc;");break;
+			case 'ë': sb.append("&euml;");break;
+			case 'Ë': sb.append("&Euml;");break;
+			case 'ï': sb.append("&iuml;");break;
+			case 'Ï': sb.append("&Iuml;");break;
+			case 'ô': sb.append("&ocirc;");break;
+			case 'Ô': sb.append("&Ocirc;");break;
+			case 'ö': sb.append("&ouml;");break;
+			case 'Ö': sb.append("&Ouml;");break;
+			case 'ø': sb.append("&oslash;");break;
+			case 'Ø': sb.append("&Oslash;");break;
+			case 'ß': sb.append("&szlig;");break;
+			case 'ù': sb.append("&ugrave;");break;
+			case 'Ù': sb.append("&Ugrave;");break;         
+			case 'û': sb.append("&ucirc;");break;         
+			case 'Û': sb.append("&Ucirc;");break;
+			case 'ü': sb.append("&uuml;");break;
+			case 'Ü': sb.append("&Uuml;");break;
+			case '®': sb.append("&reg;");break;         
+			case '©': sb.append("&copy;");break;   
+			case '€': sb.append("&euro;"); break;        
+
+			default:  sb.append(c); break;
+			}
+		}
+		return sb.toString();
+	}
+=====================================================================
+Found a 11 line (94 tokens) duplication in the following files: 
+Starting at line 26 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\EscapeText.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\EscapeText.java
+
+	public static final String escapeHTML(String s){
+		StringBuffer sb = new StringBuffer();
+		s = s.replaceAll("&#10;"," ");
+		s = s.replaceAll("&#13;"," ");
+		int n = s.length();
+		for (int i = 0; i < n; i++) {
+			char c = s.charAt(i);
+			switch (c) {
+			case '\n': sb.append(" "); break;
+			case '\r': sb.append(" "); break;
+			case '"': sb.append("&quot;"); break;
+=====================================================================
+Found a 14 line (41 tokens) duplication in the following files: 
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 69 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Script.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 80 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Comment.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Base.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var appendChild(int index, Node child){
+		if(this == child){
+			throw new Error("Cannot append a node to itself.");
+		}
+		child.setParent(this);
+		children.add(index, child);
+		return this;
+	}
+	/**
+	 * Appends a list of children in the order given in the list
+	 * @param children nodes to be appended
+	 * @return the node
+	 */
+	public Var appendChild(List<Node> children){
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 172 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 138 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 172 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 125 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 180 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 41 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 93 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 93 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 87 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 63 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 145 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 69 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 47 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Br.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 121 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 233 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var setId(String value){setAttribute("id", value); return this;}
+	public String getId(){return getAttribute("id");}
+	public boolean removeId(){return removeAttribute("id");}
+
+	public Var setCSSClass(String value){setAttribute("class", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 176 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 142 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 176 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 129 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 184 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 125 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 97 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 97 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 91 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 67 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 149 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 73 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 51 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Br.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 125 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 145 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 237 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var setCSSClass(String value){setAttribute("class", value); return this;}
+	public String getCSSClass(){return getAttribute("class");}
+	public boolean removeCSSClass(){return removeAttribute("class");}
+
+	public Var setTitle(String value){setAttribute("title", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 180 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 146 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 180 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 125 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 133 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 188 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 129 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 101 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 101 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 95 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 71 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 153 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 55 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Br.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 129 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 149 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 241 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var setTitle(String value){setAttribute("title", value); return this;}
+	public String getTitle(){return getAttribute("title");}
+	public boolean removeTitle(){return removeAttribute("title");}
+
+	public Var setStyle(String value){setAttribute("style", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 184 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 150 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 184 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 192 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 133 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 105 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 105 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 75 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 157 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 81 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 133 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 153 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 245 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var setStyle(String value){setAttribute("style", value); return this;}
+	public String getStyle(){return getAttribute("style");}
+	public boolean removeStyle(){return removeAttribute("style");}
+
+	public Var setDir(String value){setAttribute("dir", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 188 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 154 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 188 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 168 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 129 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 196 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 133 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 109 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 121 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 79 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 161 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 41 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 157 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 249 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var setDir(String value){setAttribute("dir", value); return this;}
+	public String getDir(){return getAttribute("dir");}
+	public boolean removeDir(){return removeAttribute("dir");}
+
+	public Var setLang(String value){setAttribute("lang", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 192 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 158 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 192 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 172 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 133 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 145 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 200 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 168 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 113 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 109 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 125 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 83 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 165 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 89 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 161 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 253 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var setLang(String value){setAttribute("lang", value); return this;}
+	public String getLang(){return getAttribute("lang");}
+	public boolean removeLang(){return removeAttribute("lang");}
+
+	public Var setXMLLang(String value){setAttribute("xml:lang", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 196 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 196 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 176 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 149 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 204 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 145 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 172 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 117 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 113 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 129 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 87 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 169 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 93 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+
+	public Var setXMLLang(String value){setAttribute("xml:lang", value); return this;}
+	public String getXMLLang(){return getAttribute("xml:lang");}
+	public boolean removeXMLLang(){return removeAttribute("xml:lang");}
+
+}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+
+	public Ul setCompact(String value){setAttribute("compact", value); return this;}
+	public String getCompact(){return getAttribute("compact");}
+	public boolean removeCompact(){return removeAttribute("compact");}
+
+	public Ul setType(String value){setAttribute("type", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 41 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 41 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Script.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Param.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 229 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Ul setType(String value){setAttribute("type", value); return this;}
+	public String getType(){return getAttribute("type");}
+	public boolean removeType(){return removeAttribute("type");}
+
+	public Ul setId(String value){setAttribute("id", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+
+	public Tt setLang(String value){setAttribute("lang", value); return this;}
+	public String getLang(){return getAttribute("lang");}
+	public boolean removeLang(){return removeAttribute("lang");}
+
+}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 49 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 57 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 47 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 47 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+
+	public Tr setAlign(String value){setAttribute("align", value); return this;}
+	public String getAlign(){return getAttribute("align");}
+	public boolean removeAlign(){return removeAttribute("align");}
+
+	public Tr setBgcolor(String value){setAttribute("bgcolor", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+
+	public Tr setBgcolor(String value){setAttribute("bgcolor", value); return this;}
+	public String getBgcolor(){return getAttribute("bgcolor");}
+	public boolean removeBgcolor(){return removeAttribute("bgcolor");}
+
+	public Tr setChar(String value){setAttribute("char", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 49 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+
+	public Tr setChar(String value){setAttribute("char", value); return this;}
+	public String getChar(){return getAttribute("char");}
+	public boolean removeChar(){return removeAttribute("char");}
+
+	public Tr setCharoff(String value){setAttribute("charoff", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 53 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+
+	public Tr setCharoff(String value){setAttribute("charoff", value); return this;}
+	public String getCharoff(){return getAttribute("charoff");}
+	public boolean removeCharoff(){return removeAttribute("charoff");}
+
+	public Tr setValign(String value){setAttribute("valign", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 61 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+
+	public Tr setValign(String value){setAttribute("valign", value); return this;}
+	public String getValign(){return getAttribute("valign");}
+	public boolean removeValign(){return removeAttribute("valign");}
+
+	public Tr setId(String value){setAttribute("id", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+
+	public Th setAbbr(String value){setAttribute("abbr", value); return this;}
+	public String getAbbr(){return getAttribute("abbr");}
+	public boolean removeAbbr(){return removeAttribute("abbr");}
+
+	public Th setAlign(String value){setAttribute("align", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+
+	public Th setAxis(String value){setAttribute("axis", value); return this;}
+	public String getAxis(){return getAttribute("axis");}
+	public boolean removeAxis(){return removeAttribute("axis");}
+
+	public Th setBgcolor(String value){setAttribute("bgcolor", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+
+	public Th setColspan(String value){setAttribute("colspan", value); return this;}
+	public String getColspan(){return getAttribute("colspan");}
+	public boolean removeColspan(){return removeAttribute("colspan");}
+
+	public Th setHeaders(String value){setAttribute("headers", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+
+	public Th setHeaders(String value){setAttribute("headers", value); return this;}
+	public String getHeaders(){return getAttribute("headers");}
+	public boolean removeHeaders(){return removeAttribute("headers");}
+
+	public Th setHeight(String value){setAttribute("height", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 65 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 55 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+
+	public Th setHeight(String value){setAttribute("height", value); return this;}
+	public String getHeight(){return getAttribute("height");}
+	public boolean removeHeight(){return removeAttribute("height");}
+
+	public Th setNowrap(String value){setAttribute("nowrap", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+
+	public Th setNowrap(String value){setAttribute("nowrap", value); return this;}
+	public String getNowrap(){return getAttribute("nowrap");}
+	public boolean removeNowrap(){return removeAttribute("nowrap");}
+
+	public Th setRowspan(String value){setAttribute("rowspan", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+
+	public Th setRowspan(String value){setAttribute("rowspan", value); return this;}
+	public String getRowspan(){return getAttribute("rowspan");}
+	public boolean removeRowspan(){return removeAttribute("rowspan");}
+
+	public Th setScope(String value){setAttribute("scope", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+
+	public Th setScope(String value){setAttribute("scope", value); return this;}
+	public String getScope(){return getAttribute("scope");}
+	public boolean removeScope(){return removeAttribute("scope");}
+
+	public Th setValign(String value){setAttribute("valign", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 168 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 168 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 176 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 89 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 83 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 65 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+
+	public Th setWidth(String value){setAttribute("width", value); return this;}
+	public String getWidth(){return getAttribute("width");}
+	public boolean removeWidth(){return removeAttribute("width");}
+
+	public Th setId(String value){setAttribute("id", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 42 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+
+	public Textarea setCols(String value){setAttribute("cols", value); return this;}
+	public String getCols(){return getAttribute("cols");}
+	public boolean removeCols(){return removeAttribute("cols");}
+
+	public Textarea setRows(String value){setAttribute("rows", value); return this;}
+=====================================================================
+Found a 10 line (40 tokens) duplication in the following files: 
+Starting at line 46 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+
+	public Textarea setRows(String value){setAttribute("rows", value); return this;}
+	public String getRows(){return getAttribute("rows");}
+	public boolean removeRows(){return removeAttribute("rows");}
+
+	/**
+	 * Appends a child node to the end of this element's DOM tree
+	 * @param child node to be appended
+	 * @return the node
+	 */
+	public Textarea appendChild(Node child){
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 126 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 121 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 61 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+
+	public Textarea setDisabled(String value){setAttribute("disabled", value); return this;}
+	public String getDisabled(){return getAttribute("disabled");}
+	public boolean removeDisabled(){return removeAttribute("disabled");}
+
+	public Textarea setName(String value){setAttribute("name", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 130 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 46 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Param.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 125 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 121 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 69 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 71 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 209 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Textarea setName(String value){setAttribute("name", value); return this;}
+	public String getName(){return getAttribute("name");}
+	public boolean removeName(){return removeAttribute("name");}
+
+	public Textarea setReadonly(String value){setAttribute("readonly", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 134 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 73 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+
+	public Textarea setReadonly(String value){setAttribute("readonly", value); return this;}
+	public String getReadonly(){return getAttribute("readonly");}
+	public boolean removeReadonly(){return removeAttribute("readonly");}
+
+	public Textarea setId(String value){setAttribute("id", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 162 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 165 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 257 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Textarea setXMLLang(String value){setAttribute("xml:lang", value); return this;}
+	public String getXMLLang(){return getAttribute("xml:lang");}
+	public boolean removeXMLLang(){return removeAttribute("xml:lang");}
+
+	public Textarea setTabindex(String value){setAttribute("tabindex", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 166 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 169 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 261 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Textarea setTabindex(String value){setAttribute("tabindex", value); return this;}
+	public String getTabindex(){return getAttribute("tabindex");}
+	public boolean removeTabindex(){return removeAttribute("tabindex");}
+
+	public Textarea setAccesskey(String value){setAttribute("accesskey", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 170 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 173 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 265 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Textarea setAccesskey(String value){setAttribute("accesskey", value); return this;}
+	public String getAccesskey(){return getAttribute("accesskey");}
+	public boolean removeAccesskey(){return removeAttribute("accesskey");}
+
+}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 61 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+
+	public Table setBorder(String value){setAttribute("border", value); return this;}
+	public String getBorder(){return getAttribute("border");}
+	public boolean removeBorder(){return removeAttribute("border");}
+
+	public Table setCellpadding(String value){setAttribute("cellpadding", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 121 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+
+	public Style setMedia(String value){setAttribute("media", value); return this;}
+	public String getMedia(){return getAttribute("media");}
+	public boolean removeMedia(){return removeAttribute("media");}
+
+	public Style setTitle(String value){setAttribute("title", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Script.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+
+	public Style setXmlspace(String value){setAttribute("xmlspace", value); return this;}
+	public String getXmlspace(){return getAttribute("xmlspace");}
+	public boolean removeXmlspace(){return removeAttribute("xmlspace");}
+
+}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 55 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+
+	public Select setSize(String value){setAttribute("size", value); return this;}
+	public String getSize(){return getAttribute("size");}
+	public boolean removeSize(){return removeAttribute("size");}
+
+	public Select setId(String value){setAttribute("id", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+
+	public Select setAccesskey(String value){setAttribute("accesskey", value); return this;}
+	public String getAccesskey(){return getAttribute("accesskey");}
+	public boolean removeAccesskey(){return removeAttribute("accesskey");}
+
+	public Select setTabindex(String value){setAttribute("tabindex", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+
+	public Select setTabindex(String value){setAttribute("tabindex", value); return this;}
+	public String getTabindex(){return getAttribute("tabindex");}
+	public boolean removeTabindex(){return removeAttribute("tabindex");}
+
+}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 121 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Script.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 193 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Script setCharset(String value){setAttribute("charset", value); return this;}
+	public String getCharset(){return getAttribute("charset");}
+	public boolean removeCharset(){return removeAttribute("charset");}
+
+	public Script setDefer(String value){setAttribute("defer", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 133 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Script.java
+Starting at line 81 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 53 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 79 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+
+	public Script setSrc(String value){setAttribute("src", value); return this;}
+	public String getSrc(){return getAttribute("src");}
+	public boolean removeSrc(){return removeAttribute("src");}
+
+	public Script setXmlspace(String value){setAttribute("xmlspace", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+
+	public Q setCite(String value){setAttribute("cite", value); return this;}
+	public String getCite(){return getAttribute("cite");}
+	public boolean removeCite(){return removeAttribute("cite");}
+
+	public Q setId(String value){setAttribute("id", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 54 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Param.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 89 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+
+	public Param setValue(String value){setAttribute("value", value); return this;}
+	public String getValue(){return getAttribute("value");}
+	public boolean removeValue(){return removeAttribute("value");}
+
+	public Param setValuetype(String value){setAttribute("valuetype", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 41 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+
+	public Option setLabel(String value){setAttribute("label", value); return this;}
+	public String getLabel(){return getAttribute("label");}
+	public boolean removeLabel(){return removeAttribute("label");}
+
+	public Option setSelected(String value){setAttribute("selected", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 69 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+
+	public Object setHspace(String value){setAttribute("hspace", value); return this;}
+	public String getHspace(){return getAttribute("hspace");}
+	public boolean removeHspace(){return removeAttribute("hspace");}
+
+	public Object setName(String value){setAttribute("name", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 168 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 81 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+
+	public Object setUsemap(String value){setAttribute("usemap", value); return this;}
+	public String getUsemap(){return getAttribute("usemap");}
+	public boolean removeUsemap(){return removeAttribute("usemap");}
+
+	public Object setVspace(String value){setAttribute("vspace", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 172 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+
+	public Object setVspace(String value){setAttribute("vspace", value); return this;}
+	public String getVspace(){return getAttribute("vspace");}
+	public boolean removeVspace(){return removeAttribute("vspace");}
+
+	public Object setWidth(String value){setAttribute("width", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 41 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Base.java
+Starting at line 125 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 201 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Link setHref(String value){setAttribute("href", value); return this;}
+	public String getHref(){return getAttribute("href");}
+	public boolean removeHref(){return removeAttribute("href");}
+
+	public Link setHreflang(String value){setAttribute("hreflang", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 205 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Link setHreflang(String value){setAttribute("hreflang", value); return this;}
+	public String getHreflang(){return getAttribute("hreflang");}
+	public boolean removeHreflang(){return removeAttribute("hreflang");}
+
+	public Link setMedia(String value){setAttribute("media", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 213 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Link setRel(String value){setAttribute("rel", value); return this;}
+	public String getRel(){return getAttribute("rel");}
+	public boolean removeRel(){return removeAttribute("rel");}
+
+	public Link setRev(String value){setAttribute("rev", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 217 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Link setRev(String value){setAttribute("rev", value); return this;}
+	public String getRev(){return getAttribute("rev");}
+	public boolean removeRev(){return removeAttribute("rev");}
+
+	public Link setTarget(String value){setAttribute("target", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 225 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Link setTarget(String value){setAttribute("target", value); return this;}
+	public String getTarget(){return getAttribute("target");}
+	public boolean removeTarget(){return removeAttribute("target");}
+
+	public Link setType(String value){setAttribute("type", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+
+	public Ins setDatetime(String value){setAttribute("datetime", value); return this;}
+	public String getDatetime(){return getAttribute("datetime");}
+	public boolean removeDatetime(){return removeAttribute("datetime");}
+
+	public Ins setId(String value){setAttribute("id", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 121 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+
+	public Input setAccept(String value){setAttribute("accept", value); return this;}
+	public String getAccept(){return getAttribute("accept");}
+	public boolean removeAccept(){return removeAttribute("accept");}
+
+	public Input setAlign(String value){setAttribute("align", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 53 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 49 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 41 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+
+	public Input setAlt(String value){setAttribute("alt", value); return this;}
+	public String getAlt(){return getAttribute("alt");}
+	public boolean removeAlt(){return removeAttribute("alt");}
+
+	public Input setChecked(String value){setAttribute("checked", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+
+	public Img setLongdesc(String value){setAttribute("longdesc", value); return this;}
+	public String getLongdesc(){return getAttribute("longdesc");}
+	public boolean removeLongdesc(){return removeAttribute("longdesc");}
+
+	public Img setUsemap(String value){setAttribute("usemap", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 51 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+
+	public Iframe setFrameborder(String value){setAttribute("frameborder", value); return this;}
+	public String getFrameborder(){return getAttribute("frameborder");}
+	public boolean removeFrameborder(){return removeAttribute("frameborder");}
+
+	public Iframe setHeight(String value){setAttribute("height", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 63 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+
+	public Iframe setMarginheight(String value){setAttribute("marginheight", value); return this;}
+	public String getMarginheight(){return getAttribute("marginheight");}
+	public boolean removeMarginheight(){return removeAttribute("marginheight");}
+
+	public Iframe setMarginwidth(String value){setAttribute("marginwidth", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 67 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+
+	public Iframe setMarginwidth(String value){setAttribute("marginwidth", value); return this;}
+	public String getMarginwidth(){return getAttribute("marginwidth");}
+	public boolean removeMarginwidth(){return removeAttribute("marginwidth");}
+
+	public Iframe setName(String value){setAttribute("name", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 75 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+
+	public Iframe setScrolling(String value){setAttribute("scrolling", value); return this;}
+	public String getScrolling(){return getAttribute("scrolling");}
+	public boolean removeScrolling(){return removeAttribute("scrolling");}
+
+	public Iframe setSrc(String value){setAttribute("src", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 99 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Br.java
+
+	public Iframe setStyle(String value){setAttribute("style", value); return this;}
+	public String getStyle(){return getAttribute("style");}
+	public boolean removeStyle(){return removeAttribute("style");}
+
+}
+=====================================================================
+Found a 7 line (40 tokens) duplication in the following files: 
+Starting at line 46 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Comment.java
+Starting at line 62 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\FertileNode.java
+
+		StringBuilder b = new StringBuilder("<!-- >");
+		if(children != null && children.size() > 0){
+			for(Node child: children){
+				b.append(child.write());
+			}
+		}
+		b.append("< -->");
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 57 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+
+	public Colgroup setSpan(String value){setAttribute("span", value); return this;}
+	public String getSpan(){return getAttribute("span");}
+	public boolean removeSpan(){return removeAttribute("span");}
+
+	public Colgroup setValign(String value){setAttribute("valign", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 121 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 197 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Area setCoords(String value){setAttribute("coords", value); return this;}
+	public String getCoords(){return getAttribute("coords");}
+	public boolean removeCoords(){return removeAttribute("coords");}
+
+	public Area setHref(String value){setAttribute("href", value); return this;}
+=====================================================================
+Found a 5 line (40 tokens) duplication in the following files: 
+Starting at line 133 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 221 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Area setShape(String value){setAttribute("shape", value); return this;}
+	public String getShape(){return getAttribute("shape");}
+	public boolean removeShape(){return removeAttribute("shape");}
+
+	public Area setTarget(String value){setAttribute("target", value); return this;}
+=====================================================================
+Found a 3 line (39 tokens) duplication in the following files: 
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 172 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 138 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 172 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 62 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Param.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 125 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 180 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 41 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 93 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 93 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 87 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 63 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 145 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 69 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 47 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Br.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 120 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 121 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 116 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 233 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var setId(String value){setAttribute("id", value); return this;}
+	public String getId(){return getAttribute("id");}
+	public boolean removeId(){return removeAttribute("id");}
+=====================================================================
+Found a 3 line (39 tokens) duplication in the following files: 
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 184 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 150 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 184 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 192 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 133 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 105 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 105 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 99 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 75 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 157 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 81 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Br.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 132 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 133 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 153 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 245 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var setStyle(String value){setAttribute("style", value); return this;}
+	public String getStyle(){return getAttribute("style");}
+	public boolean removeStyle(){return removeAttribute("style");}
+=====================================================================
+Found a 3 line (39 tokens) duplication in the following files: 
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 192 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 158 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 192 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 172 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 133 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 145 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 200 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 168 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 113 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 109 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 125 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 83 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 124 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 165 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 89 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 161 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 253 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var setLang(String value){setAttribute("lang", value); return this;}
+	public String getLang(){return getAttribute("lang");}
+	public boolean removeLang(){return removeAttribute("lang");}
+=====================================================================
+Found a 3 line (39 tokens) duplication in the following files: 
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 196 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 162 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 196 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 176 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 149 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 204 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 145 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 172 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 117 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 113 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 129 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 87 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 128 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 169 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 152 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 148 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 93 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 156 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 144 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 165 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 257 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var setXMLLang(String value){setAttribute("xml:lang", value); return this;}
+	public String getXMLLang(){return getAttribute("xml:lang");}
+	public boolean removeXMLLang(){return removeAttribute("xml:lang");}
+=====================================================================
+Found a 3 line (39 tokens) duplication in the following files: 
+Starting at line 166 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 164 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 169 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 261 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Textarea setTabindex(String value){setAttribute("tabindex", value); return this;}
+	public String getTabindex(){return getAttribute("tabindex");}
+	public boolean removeTabindex(){return removeAttribute("tabindex");}
+=====================================================================
+Found a 3 line (39 tokens) duplication in the following files: 
+Starting at line 170 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 160 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 173 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 265 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Textarea setAccesskey(String value){setAttribute("accesskey", value); return this;}
+	public String getAccesskey(){return getAttribute("accesskey");}
+	public boolean removeAccesskey(){return removeAttribute("accesskey");}
+=====================================================================
+Found a 3 line (39 tokens) duplication in the following files: 
+Starting at line 140 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 141 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 121 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Base.java
+Starting at line 137 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 225 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Link setTarget(String value){setAttribute("target", value); return this;}
+	public String getTarget(){return getAttribute("target");}
+	public boolean removeTarget(){return removeAttribute("target");}
+=====================================================================
+Found a 15 line (36 tokens) duplication in the following files: 
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 55 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Script.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 66 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Comment.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Base.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 122 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var appendChild(Node child){
+		if(this == child){
+			throw new Error("Cannot append a node to itself.");
+		}
+		child.setParent(this);
+		children.add(child);
+		return this;
+	}
+	/**
+	 * Appends a child node at the given index
+	 * @param index insert point
+	 * @param child node to be appended
+	 * @return the node
+	 */
+	public Var appendChild(int index, Node child){
+=====================================================================
+Found a 14 line (34 tokens) duplication in the following files: 
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 82 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Script.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 93 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Comment.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Base.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 77 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 72 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 149 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var appendChild(List<Node> children){
+		if(children != null){;
+			for(Node child: children){
+				appendChild(child);
+			}
+		}
+		return this;
+	}
+	/**
+	 * Appends the given children in the order given
+	 * @param children nodes to be appended
+	 * @return the node
+	 */
+	public Var appendChild(Node... children){
+=====================================================================
+Found a 12 line (34 tokens) duplication in the following files: 
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 95 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 90 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 90 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Script.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 90 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 90 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 90 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 90 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 90 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 106 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Comment.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 90 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 90 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Base.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 90 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 162 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var appendChild(Node... children){
+		for(int i = 0; i < children.length; i++){
+			appendChild(children[i]);
+		}
+		return this;
+	}
+	/**
+	 * Convenience method which appends a text node to this element
+	 * @param text the text to be appended
+	 * @return the node
+	 */
+	public Var appendText(String text){
+=====================================================================
+Found a 14 line (31 tokens) duplication in the following files: 
+Starting at line 33 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Param.java
+Starting at line 32 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Input.java
+Starting at line 34 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Img.java
+Starting at line 32 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Iframe.java
+Starting at line 32 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Hr.java
+Starting at line 32 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Col.java
+Starting at line 32 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Br.java
+
+		setName(name);
+	}
+
+	@Override
+	public String write(){
+		return writeOpen();
+	}
+	
+	@Override
+	public String toString(){
+		return this.write();
+	}
+
+	public Param setName(String value){setAttribute("name", value); return this;}
+=====================================================================
+Found a 12 line (30 tokens) duplication in the following files: 
+Starting at line 104 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\Node.java
+Starting at line 69 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\FertileNode.java
+
+		b.append(writeClose());
+		return b.toString();
+	}
+	
+	/**
+	 * A convenient way of calling write().
+	 * This method calls this.write().
+	 */
+	@Override
+	public String toString(){
+		return this.write();
+	}
+=====================================================================
+Found a 6 line (28 tokens) duplication in the following files: 
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Var.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ul.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\U.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tt.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tr.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Title.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Thead.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Th.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tfoot.java
+Starting at line 55 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 69 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Textarea.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Td.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Tbody.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Table.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sup.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Sub.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Style.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strong.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Strike.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Span.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Small.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Select.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Script.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Script.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Samp.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\S.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Q.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Pre.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\P.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Option.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Optgroup.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ol.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Object.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noscript.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Noframes.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Meta.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Map.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Link.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Li.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Label.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Kbd.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Ins.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\I.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Html.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Head.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H6.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H5.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H4.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H3.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H2.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\H1.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frameset.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Frame.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Form.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Font.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Fieldset.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Em.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dt.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dl.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Div.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dir.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dfn.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Del.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Dd.java
+Starting at line 66 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Comment.java
+Starting at line 80 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Comment.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Colgroup.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Code.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Cite.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Caption.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Button.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Body.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Blockquote.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Big.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Bdo.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Base.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Base.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\B.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 64 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Area.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Address.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Acronym.java
+Starting at line 45 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 59 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\Abbr.java
+Starting at line 122 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+Starting at line 136 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\elements\A.java
+
+	public Var appendChild(Node child){
+		if(this == child){
+			throw new Error("Cannot append a node to itself.");
+		}
+		child.setParent(this);
+		children.add(child);
+=====================================================================
+Found a 4 line (28 tokens) duplication in the following files: 
+Starting at line 71 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\Node.java
+Starting at line 85 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\Node.java
+
+	public String getAttribute(String name){
+		for(Attribute attribute: attributes_){
+			if(attribute.getName().equals(name)){
+				return attribute.getValue();
+=====================================================================
+Found a 14 line (26 tokens) duplication in the following files: 
+Starting at line 69 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\FertileNode.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\Document.java
+
+		b.append(writeClose());
+		return b.toString();
+	}
+	
+	/**
+	 * A convenient way of calling write().
+	 * This method calls this.write().
+	 */
+	@Override
+	public String toString(){
+		return this.write();
+	}
+	
+}
+=====================================================================
+Found a 12 line (25 tokens) duplication in the following files: 
+Starting at line 104 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\Node.java
+Starting at line 50 of C:\simplecode\Gagawa\src\com\hp\gagawa\java\Document.java
+
+		b.append(writeClose());
+		return b.toString();
+	}
+	
+	/**
+	 * A convenient way of calling write().
+	 * This method calls this.write().
+	 */
+	@Override
+	public String toString(){
+		return this.write();
+	}
